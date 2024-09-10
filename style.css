@@ -1,0 +1,117 @@
+*{
+    box-sizing: border-box;
+}
+/*box-sizing: permite incluir o preenchimento e a borda na largura e altura total de um elemento*/
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(120deg, #845EC2, #9B89B3, #252257); 
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+}
+/*background-attachment: define se a imagem de fundo rrola com o resto da página ou é fixa;
+VH significa "altura da viewport", que é a altura da tela visível e VW significa "largura da viewport", que é a largura da tela visível.
+Margin é o espaço ao redor da borda de um elemento.*/
+.formulario{
+    width: 500px;
+    max-width: 100%;
+    margin: auto;
+    margin-top: 30px;
+    padding: 20px;
+    box-shadow: 0 0 20px 1px #252257;
+    position: relative;
+    background: #e8b7ee;
+    border-radius: 15px;
+}
+/*margin-top: que define a margem superior de um elemento. 
+Padding: gera espaço ao redor do conteúdo de um elemento, dentro de quaisquer bordas definidas.
+Box-shadow: specifique uma sombra horizontal e uma vertical: div { box-shadow: 10px 10px; ...*/
+
+.imgLogo{
+    width: 100px;
+    height: 100px;
+    border-radius: 150px;
+    display: block;
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    /*border: 1px solid rgba(109, 86, 10, 0.7);*/
+}
+/* margin-bottom: 20px; adiciona 20 pixels de espaço abaixo do elemento.
+Display: usado para especificar como um elemento é mostrado em uma página da web*/
+.formulario_titulo,
+.formulario_subtitulo,
+.formulario_paragrafo{
+    text-align: center;
+    margin-top: 0;
+}
+.formulario_titulo,
+.formulario_subtitulo{
+    color: #554690;
+}
+.formulario_paragrafo{
+    color: #252257;
+}
+.formulario_input,
+.formulario_label{
+    display: block;
+    width: 100%;
+    font-size: 1, 3em;
+    color: black;
+}
+.formulario_input{
+    padding: 10px;
+    background: transparent;
+    /*Posso colocar outra cor mas com transparência assim: background: rgba(0,0,0,0.1) porque senão os rótulos não podem ser vistos, embora não seja mais necessário porque eles não estão mais nas entradas e também removi os índice z*/
+    border: 1px solid #252257;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+.formulario_input:focus{
+    /*outline: 1 px solid rgba(0, 0, 0, 0.7);*/
+    outline: none;
+    /*Um elemento que você pode lembrar que já vem com está propriedade por padrão são os campos de input, eles exibem o contorno quando estão selecionados, caso queira remover está propriedade basta utilizar outline:none dentro do bloco de estilo do respectivo input com o pseudo elemento focus.*/
+    box-shadow: 0px 0px 2px #372E6A;
+}
+/*.formulario__input:focus + .formulario__label{
+    margin-top: -120px;
+}*/
+.formulario_label{
+    padding-left: 15px;
+    /*position: absolute;*/
+    /*margin-top: -78px;*/
+    /*z-index: -20;*/
+    color: #252257;
+    /*transition: all 0.2s;*/
+    margin: 2px;
+}
+.formulario_submit{
+    background: #252257;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    display: block;
+    width: 50%;
+    font-size: 1, 3em;
+}
+/*Centrar os campos do formulário (O input e o botão Enviar para WhatsApp, que também é um input)*/
+.formulario_input,
+.formulario_submit{
+    margin-left: auto;
+    margin-right: auto;
+}
+/*resposta do formulario*/
+#resposta{
+    width: 100%;
+    height: 50px;
+    margin: 5px;
+    padding: 5px;
+}
+#resposta.fail{
+    color: red;
+}
+#resposta.send{
+    color: green;
+}

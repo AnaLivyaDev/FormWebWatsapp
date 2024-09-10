@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulários para fazer reservas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="" class="formulario">
+        <!--form: indica que estou começando um formulário; action: define para onde os dados seram enviados-->
+        <img src="logo.jpg" class="imgLogo" />
+
+        <h1 class="formulario_titulo">BEAUTY STUDIO</h1>
+        <h3 class="formulario_subtitulo">Reservas</h3>
+        <p class="formulario_paragrafo">
+            Formulario para agendar seu horário no salão Beauty Studio 
+        </p>
+
+        <label for="cliente" class="formulario_label">Qual é seu nome?</label>
+        <!--label: entrada de texto, mais útil para botões de opção ou caixa de seleção-->
+        <input
+          id="cliente"
+          type="text"
+          class="formulario_input"
+          placeholder="indique qual é o seu nome completo">
+        
+        <!--input: um campo para ser inserido texto,data,número,etc; placeholder: qual o valor esperado de um campo de entrada-->
+
+        <label for="data" class="formulario_label">Data de sua reserva</label>
+        <input
+          id="data"
+          type="date"
+          class="formulario_input"
+          pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
+        />
+        <!--pattern: permite adicionar validação básica de dados sem decorrer a Js-->
+
+        <label for="hora" class="formulario_label">Horário de sua reserva</label>
+        <input
+          id="hora"
+          type="time"
+          class="formulario_input"
+        />
+
+        <label for="funcionario" class="formulario_label">Funcionário de sua preferência</label>
+        <select id="funcionario" name="listafuncionarios" class="formulario_input">
+            <option>Maria Clara</option>
+            <option>Tiago Castro</option>
+            <option>Ana Lari</option>
+        </select>
+        <!--select é um menu de opções-->
+
+        <label for="servico" class="formulario_label">Qual o serviço que deseja realizar?</label>
+        <select id="servico" name="listaservico" class="formulario_input">
+            <option>HIDRATAÇÃO PROFUNDA E FINALIZAÇÃO - $200</option>
+            <option>CORTE E HIDRATAÇÃO PROFUNDA E FINALIZAÇÃO - $350</option>
+            <option>CORTE - $100</option>
+            <option>MORENA ILUMINADA - $500</option>
+            <option>BOTOX - $700</option>
+        </select>
+
+        <div id="resposta"></div>
+
+        <button id="submit" class="formulario_submit">Envia a Whatsapp</button>  
+    </form>
+    <script src="form.js"></script>
+</body>
+</html>
