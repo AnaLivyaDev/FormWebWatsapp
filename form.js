@@ -14,7 +14,7 @@ document.querySelector("#submit").addEventListener("click", e => {
     resp.classList.remove("fail");
     resp.classList.remove("send");
   
-    const url = `https://web.whatsapp.com/send?phone=${telefone}&text=
+    const url = `https://api.whatsapp.com/send?phone=${telefone}&text=
           [*_BEAUTY STUDIO_*%0A
           *Reservas*%0A%0A
           *Qual é seu nome?*%0A
